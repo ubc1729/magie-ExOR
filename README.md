@@ -1,5 +1,5 @@
 # XOR---Doubly-linked-list
-## Traversing,Reversing and Sorting (using bubble sort)
+## Traversing,Reversing and Sorting (using bubble sort) in C 
 ## Memory Efficient
 - An ordinary Doubly Linked List requires space for two address fields to store the addresses of previous and next nodes.
 - A memory efficient version of Doubly Linked List can be created using only one space for address field with every node. 
