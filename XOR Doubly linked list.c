@@ -89,7 +89,7 @@ void traverse_from_end_to_front(struct node *tail)
 //---------------------------------------------------------------------------------------
 void reverse(struct node **head, struct node **tail) // since it is symmetric
 {
-    (*head) = (struct node*)((uintptr_t)(*head) + (uintptr_t)(*tail));
+    (*head) = (struct node*)((uintptr_t)(*head) + (uintptr_t)(*tail));//swapping without using third pointer 
     (*tail) = (struct node*)((uintptr_t)(*head) - (uintptr_t)(*tail));
     (*head) = (struct node*)((uintptr_t)(*head) - (uintptr_t)(*tail));
 }
@@ -130,9 +130,9 @@ void sort(struct node **head, struct node **tail) //without change data field of
 //---------------------------------------------------------------------------------------------
 int main()
 {
-  srand(time(0)); //seeding
+  srand(time(0)); //seeding - for filling list randomly
   struct node *a,*c,*head,*tail,*prev,*curr;
-  printf("Enter n: ");
+  printf("Enter n : ");
   scanf("%d",&n);
   if(n <= 0)
   {
