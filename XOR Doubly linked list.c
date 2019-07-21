@@ -130,15 +130,21 @@ void sort(struct node **head, struct node **tail) //without change data field of
 //---------------------------------------------------------------------------------------------
 int main()
 {
-   //int n;
   srand(time(0)); //seeding
   struct node *a,*c,*head,*tail,*prev,*curr;
   printf("Enter n: ");
   scanf("%d",&n);
+  if(n <= 0)
+  {
+    printf("oops!Enter an integer grater than 0");
+    exit(0);
+  }
   a = (struct node*)malloc(sizeof(struct node));
   a->data = rand()%100; //not more than 2 digits
   head = a; //head
   prev = a;
+  tail = a;
+  curr = a;
   c = NULL;
   int i;
   for(i=2;i<=n;i++)
@@ -159,5 +165,6 @@ int main()
   sort(&head,&tail);
   printf("Sorted ");
   traverse_from_front_to_end(head);
+  return 0;
 }
 
